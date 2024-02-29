@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw Model</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <table>
+      <tr>
+        <td><p>漫反射颜色</p></td>
+        <td><input id="diffuseColor" type="color" value="#ffffff"></td>
+        <td><p>漫反射系数</p></td>
+        <td><input id="diffuse" type="range" value="1.0" max="1.0" min="0.0" step="0.01"></td>
+      </tr>
+      <tr>
+        <td><p>高光颜色</p></td>
+        <td><input id="specularColor" type="color" value="#ffffff"></td>
+        <td><p>高光系数</p></td>
+        <td><input id="specular" type="range" value="0.5" max="1.0" min="0.0" step="0.01"></td>
+        <td><p>光泽度</p></td>
+        <td><input id="gloss" type="range" value="32" max="2048" min="1" step="1"></td>
+      </tr>
+      <tr>
+        <td><p>环境光颜色</p></td>
+        <td><input id="ambientColor" type="color" value="#ffffff"></td>
+        <td><p>环境光系数</p></td>
+        <td><input id="ambient" type="range" value="0.1" max="1.0" min="0.0" step="0.01"></td>
+      </tr>
+      <tr>
+        <td><p>光线颜色</p></td>
+        <td><input id="lightColor" type="color" value="#7fffff"></td>
+      </tr>
+    </table>
+
+    <script src="../libs/webgl-utils.js"></script>
+    <script src="../libs/webgl-debug.js"></script>
+    <script src="../libs/cuon-utils.js"></script>
+    <script src="../libs/cuon-matrix.js"></script>
+    <script src="../libs/MyMatrix4.js"></script>
+    <script src="BlinnPhone.js"></script>
+  </body>
+</html>
